@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Clinica Veterinaria</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carousel.css">
+   
+</head>
+
+
+<body style="padding: 0px;">
+    <header>
+        <div style="background-color: rgba(148,180,112,1)!important; width: 100%; display:flex; flex-direction:column;  ">
+            <p style="text-align: end; justify-content: center; margin-right: 50px;">Consultas Generales: 4123-4123</p>
+        </div>
+    </header>
+        <div class="headerContainer">
+            <div class="logo">
+                <img src="img/logoveterinaria.png" class="imgLogo" alt="Icono">
+            </div>
+            <nav class="menu">
+                <ul>
+                    <a class="itemMenu" href="#">Inicio</a>
+                    <a class="itemMenu" href="#">Tienda</a>
+                    <a class="itemMenu" href="#">Consultorio</a>
+                    <a class="itemMenu" href="#">Contacto</a>
+                </ul>
+            </nav>
+        </div>
+<main >
+<div>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          
+          <img src="img/img1.webp" style="width:100%">
+          
+        </div>
+        
+        <div class="mySlides fade">
+          
+          <img src="img/img1.webp" style="width:100%">
+         
+        </div>
+        
+        <div class="mySlides fade">
+          
+          <img src="img/img1.webp" style="width:100%">
+        
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+            
+        </div>
+    </main>
+
+
+
+
+    <footer>
+
+    </footer>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+</body>
+</html>
