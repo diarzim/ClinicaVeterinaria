@@ -9,19 +9,19 @@
     align-items: center;
 }
 .itemMenu{
-    color: #7374d6!important;
+    color: #5e17eb!important;
     text-decoration: none;
     font-size: 18px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 10px;
 }
 .itemMenu:hover {
-    color: rgba(148,180,112,1)!important;
+    color: #fe86b0!important;
     transition: 0.2s;
   }
 .imgLogo{
-    width: 180px; 
-    height: 130px;
+    width: 150px; 
+    height: 150px;
 }
 .headerContainer{
     flex-direction:row; 
@@ -29,7 +29,7 @@
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
-    height: 100px;
+    height: 110px;
 }
 body {
     margin:0;
