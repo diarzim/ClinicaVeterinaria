@@ -1,3 +1,11 @@
+html{
+    min-height: 100%;
+    position: relative;
+}
+body {
+    margin:0;
+    padding: 0;
+}
 .menu{
     width: 90%; 
     text-align: right;
@@ -9,19 +17,19 @@
     align-items: center;
 }
 .itemMenu{
-    color: #5e17eb!important;
+    color: #7374d6!important;
     text-decoration: none;
     font-size: 18px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 10px;
 }
 .itemMenu:hover {
-    color: #fe86b0!important;
+    color: rgba(148,180,112,1)!important;
     transition: 0.2s;
   }
 .imgLogo{
-    width: 150px; 
-    height: 150px;
+    width: 180px; 
+    height: 130px;
 }
 .headerContainer{
     flex-direction:row; 
@@ -29,9 +37,57 @@
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
-    height: 110px;
+    height: 100px;
 }
-body {
-    margin:0;
-    padding: 0;
-   }
+
+footer {
+    background-color: #ddfdcb!important;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 150px;
+    color: #000;
+    text-align: -webkit-center;
+  }
+
+.footerTextTitle{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase; 
+    color: rgb(115, 116, 214); 
+    font-weight: bold; 
+    display: initial;
+  }
+
+  .footerText{
+    display: initial; 
+    color: rgb(19, 19, 19);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+  }
+  .imgSocialMedia{
+    margin: 0px 5px 0px 5px;
+    justify-content: left; 
+  }
+  .imgSocial{
+    width: 25px; 
+    height: 25px;
+  }
+.textHeader{
+    text-align: end; 
+    justify-content: center; 
+    margin-right: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.textHeaderSub{
+    text-align: end; 
+    justify-content: center; 
+    font-size: 15px;
+    font-weight: normal;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}

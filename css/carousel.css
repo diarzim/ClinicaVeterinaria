@@ -1,12 +1,17 @@
 * {box-sizing: border-box}
     
 .mySlides {display: none}
-img {vertical-align: middle;}
+.imgCarousel {
+    vertical-align: middle; 
+    object-fit: cover;
+    object-position: center center;
+}
 
 /* Slideshow container */
 .slideshow-container {
 padding-top: 25px;
   max-width: 100%;
+ 
   position: relative;
   margin: auto;
 }
