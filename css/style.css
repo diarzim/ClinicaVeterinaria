@@ -10,17 +10,11 @@ body {
 
 .menu {
   width: 100%;
-  top:50px;
-  padding: 20px;
-
-} 
-
-header nav img{
-  float: left;
-  height: 80px;
+  padding: 10px;
 } 
 
   .itemMenu{
+    clear: both;
     color: #621ceb!important;
     text-decoration: none;
     font-size: 16px;
@@ -40,8 +34,6 @@ header nav img{
   justify-content: center;
   align-items: center;
 }
-
-
 
 .imgLogo {
   width: 160px;
@@ -136,6 +128,7 @@ footer {
     flex-direction:row;
     text-align: center;
   }
+
 }
 @media only screen and (min-width: 600px) {
   .textHeader {
@@ -160,4 +153,4 @@ footer {
     text-align: end;
   }
   
-  } 
+}
