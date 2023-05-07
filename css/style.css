@@ -93,22 +93,13 @@ footer {
 .textHeader {
   text-align: end;
   justify-content: center;
-  margin-right: 5px;
+  margin-right: 50px;
   font-size: 14px;
   font-weight: bold;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: white;
   letter-spacing: 0.5px;
 
-}
-
-.textHeaderSub {
-  text-align: end;
-  justify-content: center;
-  font-size: 14px;
-  font-weight: normal;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: white;
 }
 
 .contenedor {
@@ -126,11 +117,36 @@ footer {
 
 
 @media only screen and (max-width:1200px) {
+  .textHeader {
+    flex-direction:column;
+    text-align: center;
+    margin-right: 0px;
   }
-  /* Small devices (600px and up) */
+
+  .menu {
+    flex-direction:column;
+    text-align: center;
+  }
+}
 @media only screen and (min-width: 800px) {
-  .example {background: green;}
+  .textHeader {
+    flex-direction:column;
+    text-align: end;
   }
-  /* Medium devices (768px and up) */
+  .menu {
+    flex-direction:column;
+    text-align: end;
+  }
+
+  }
 @media only screen and (min-width: 320px) and (max-width: 768px) and (orientation: landscape) { 
+  .textHeader {
+    flex-direction:column;
+    text-align: center;
+    margin-right: 0px;
+  }
+  .menu {
+    flex-direction:column;
+    text-align: center;
+  }
   } 
