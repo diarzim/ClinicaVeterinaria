@@ -10,10 +10,30 @@ body {
 
 .menu {
   width: 100%;
-  text-align: right;
+  top:50px;
   padding: 20px;
 
-}
+} 
+
+header nav img{
+  float: left;
+  height: 80px;
+} 
+
+  .itemMenu{
+    color: #621ceb!important;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+    font-weight: bold;
+  }
+
+    .itemMenu:hover {
+      color: #fe88b1 !important;
+      transition: 0.2s;
+    }
+
 
 .logo {
   width: 10%;
@@ -21,18 +41,6 @@ body {
   align-items: center;
 }
 
-.itemMenu {
-  color: #7374d6 !important;
-  text-decoration: none;
-  font-size: 18px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  padding: 10px;
-}
-
-.itemMenu:hover {
-  color: rgba(148, 180, 112, 1) !important;
-  transition: 0.2s;
-}
 
 
 .imgLogo {
@@ -43,16 +51,27 @@ body {
 header {
   position: sticky;
   top: 0px;
-  flex-direction: row;
   display: flex;
   align-items: center;
   background-color: white;
   padding-left: 20px;
   padding-right: 20px;
-  height: 60px;
+  height: 80px;
   box-shadow: 0 3px 4px -2px gray;
 
 }
+
+  .textHeader {
+    text-align: end;
+    justify-content: center;
+    height: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    letter-spacing: 0.5px;
+
+  }
 
 footer {
   background-color:  #dce3ff!important;
@@ -90,17 +109,7 @@ footer {
   height: 25px;
 }
 
-.textHeader {
-  text-align: end;
-  justify-content: center;
-  margin-right: 50px;
-  font-size: 14px;
-  font-weight: bold;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: white;
-  letter-spacing: 0.5px;
 
-}
 
 .contenedor {
   width: 100%;
@@ -116,37 +125,39 @@ footer {
 }
 
 
-@media only screen and (max-width:1200px) {
+@media only screen and (max-width:600px) {
   .textHeader {
-    flex-direction:column;
+    flex-direction:row;
     text-align: center;
     margin-right: 0px;
   }
 
   .menu {
-    flex-direction:column;
+    flex-direction:row;
     text-align: center;
   }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .textHeader {
-    flex-direction:column;
-    text-align: end;
-  }
-  .menu {
-    flex-direction:column;
-    text-align: end;
-  }
-
-  }
-@media only screen and (min-width: 320px) and (max-width: 768px) and (orientation: landscape) { 
-  .textHeader {
-    flex-direction:column;
+    flex-direction:row;
     text-align: center;
     margin-right: 0px;
   }
   .menu {
-    flex-direction:column;
+    flex-direction:row;
     text-align: center;
   }
+
+  }
+@media only screen and (min-width: 1000px) { 
+  .textHeader {
+    flex-direction:row;
+    text-align: end;
+    margin-right: 50px;
+  }
+  .menu {
+    flex-direction:row;
+    text-align: end;
+  }
+  
   } 
