@@ -110,3 +110,16 @@ footer {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: white;
 }
+
+.contenedor {
+  width: 100%;
+  margin: 0 auto;
+  
+}
+
+@media (min-width:480px) {
+  .dos-columnas {
+      display: flex;
+      justify-content: space-between;
+  }
+}
