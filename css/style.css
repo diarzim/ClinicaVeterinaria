@@ -14,7 +14,6 @@ body {
 } 
 
   .itemMenu{
-    clear: both;
     color: #621ceb!important;
     text-decoration: none;
     font-size: 16px;
@@ -43,14 +42,17 @@ body {
 header {
   position: sticky;
   top: 0px;
-  display: flex;
-  align-items: center;
   background-color: white;
-  padding-left: 20px;
-  padding-right: 20px;
-  height: 80px;
   box-shadow: 0 3px 4px -2px gray;
 
+}
+.headerContainer{
+  flex-direction:row;
+  display:flex;
+  align-items: center;
+  padding-left:20px;
+  padding-right:20px;
+  height: 100px;
 }
 
   .textHeader {
@@ -100,7 +102,6 @@ footer {
   width: 25px;
   height: 25px;
 }
-
 
 
 .contenedor {
