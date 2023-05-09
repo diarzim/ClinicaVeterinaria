@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="icon" href="img/isologo veterinaria.ico">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 
 <body>
 
-    <div style="background-color: #fe88b1!important; width: 100%; display:flex; flex-direction:column;">
+    <div class="containerSupHeader">
         <div>
             <p class="textHeader">Consultas Generales: 4123-4123</p>
         </div>
@@ -26,15 +26,19 @@
     <header>
         <div class="headerContainer">
             <div class="logo">
-                <img src="img/logoveterinaria letras mas grandes.png" alt="isologo veterinaria" style="height:80px;">
+                <img src="img/logoveterinaria letras mas grandes.png" alt="isologo veterinaria" class="logoStyle">
             </div>
 
-            <nav class="menu">
+            <nav class="menu" id="myTopnav">
+                
                 <ul style="display:block;">
                     <a class="itemMenu" href="index.html">Inicio</a>
                     <a class="itemMenu" href="Tienda.html">Tienda</a>
                     <a class="itemMenu" href="#">Consultorio</a>
                     <a class="itemMenu" href="#">Contacto</a>
+                    <a class="status" onclick="myFunction()" href="javascript:void(0);"> <i class="fa fa-bars" style="color: #7374d6;" aria-hidden="true"></i></a>
+
+
                 </ul>
             </nav>
         </div>
@@ -42,19 +46,6 @@
 
 
     <main style="width: 100%; height: 100%;">
-
-        <div class="contenedor dos-columnas">
-            <article>
-                <h1>Clinica Veterinaria Fenix</h1>
-                <p>Somos Mascotas - Clínica Veterinaria Fenix, dedicados al cuidado y calidad de vida de tu mascota.  </p>
-                <p>Contamos con más de 45 años de experiencia y vocación en el rubro. Nos enfocamos en la salud de cada animal, a través de nuestros servicios. Contamos con médicos especializados.  </p>
-                <p>Comuníquese con su veterinario amigo en la solapa CLÍNICA de manera online en la comodidad de su casa y salde todas sus dudas sobre sus mascotas.  </p>
-            </article>
-
-            <article>
-                <img src="img/close-up-veterinarian-taking-care-dog.jpg" style="max-width: 50%">
-            </article>
-        </div>
 
 
         <div class="slideshow-container">
@@ -89,35 +80,55 @@
             <span class="dot active" onclick="currentSlide(3)"></span>
         </div>
 
-        <div style="min-height: 200px; flex-direction: column;">
+        <div class="containerColumn">
 
-            <span> Sacar turno</span>
+            <div class="contenedor dos-columnas">
+                <div style="width: 80%;">
+                    <article>
+                        <h1>Clinica Veterinaria Fenix</h1>
+                        <p>Somos Mascotas - Clínica Veterinaria Fenix, dedicados al cuidado y calidad de vida de tu
+                            mascota. </p>
+                        <p>Contamos con más de 45 años de experiencia y vocación en el rubro. Nos enfocamos en la salud
+                            de cada animal, a través de nuestros servicios. Contamos con médicos especializados. </p>
+                        <p>Comuníquese con su veterinario amigo en la solapa CLÍNICA de manera online en la comodidad de
+                            su casa y salde todas sus dudas sobre sus mascotas. </p>
+                    </article>
+                </div>
+                <div style="width: 90%; align-self: center; text-align: center;">
+                    <article>
+                        <img src="img/close-up-veterinarian-taking-care-dog.jpg" style="max-width: 50%">
+                    </article>
+                </div>
+            </div>
 
+            <div class="contenedor">
+                <h5>Brindamos servicio de urgencias y emergencias diurnas, según el caso clínico</h5>
+                <p>Contamos con el traslado a clínica de su mascota, previamente habiendo programado por teléfono y
+                    durante el día! Además, realizamos prequirúrgicos los días miércoles con turno previo.</p>
+                <p> Nuestros profesionales van donde lo soliciten. Contamos con un amplio conocimiento en el cuidado de
+                    tu mascota.</p>
+                <p> Ofrecemos una atención personalizada y brindamos un seguimiento adecuado.</p>
+
+            </div>
 
         </div>
 
 
-        <div>
-            <h5>Brindamos servicio de urgencias y emergencias diurnas, según el caso clínico</h5>
-            <p>Contamos con el traslado a clínica de su mascota, previamente habiendo programado por teléfono y durante el día! Además, realizamos prequirúrgicos los días miércoles con turno previo.</p>
-            <p> Nuestros profesionales van donde lo soliciten. Contamos con un amplio conocimiento en el cuidado de tu mascota.</p>
-            <p> Ofrecemos una atención personalizada y brindamos un seguimiento adecuado.</p>
 
-        </div>
 
     </main>
 
 
 
     <footer>
-        <div style="display: flex; width: 70%; margin: 0px 20px 0px 20px; text-align: left;">
-            <div style="width: 15%;">
+        <div class="containerFooter">
+            <div style="width: 20%;">
                 <div class="logo">
                     <img src="img/logoveterinaria.png" class="imgLogo" alt="Icono">
                 </div>
             </div>
 
-            <div style="width: 25%;">
+            <div style="width: 30%;">
                 <div>
                     <h5>
                         <span class="footerTextTitle">UBICACIÓN</span>
@@ -134,7 +145,7 @@
 
             </div>
 
-            <div style="width: 25%;">
+            <div style="width: 30%;">
                 <div>
                     <h5>
                         <span class="footerTextTitle">CONTACTANOS</span>
@@ -196,6 +207,18 @@
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
         }
+    </script>
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "menu") {
+        x.className += " responsive";
+        
+      } else {
+        x.className = "menu";
+      }
+    }
     </script>
 </body>
 
