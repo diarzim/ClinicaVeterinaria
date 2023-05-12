@@ -252,3 +252,33 @@ footer {
 
 
 }
+
+
+
+
+@media only screen and (max-width: 1000px) {
+
+  .containerFooter{
+    display:contents; 
+    flex-direction: column;
+    width: 70%; 
+    margin: 0px 00px 0px 0px; 
+    text-align: left;
+  }
+  footer {
+    background-color: #dce3ff !important;
+    position: inherit;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    color: #000;
+    text-align: -webkit-center;
+  }
+  .flexright {
+   display: inline-block;
+   padding: 0px;
+   width: 30%;
+   padding-bottom: 15px;
+  }
+}
