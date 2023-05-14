@@ -1,47 +1,48 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/consultorioStyle.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Peluqueria</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="icon" href="img/isologo veterinaria.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <title>Consultorio</title>
+    <link rel="stylesheet" href="css/consultorioStyle.css">
 </head>
+
+
 <body>
-    <div class="top-bar">
-        <span><ion-icon name="call-outline"></ion-icon> 4123-4123</span>
+    <div class="containerSupHeader">
+        <div>
+            <p class="textHeader">Consultas Generales: 4123-4123</p>
+        </div>
     </div>
+
     <header>
-        <div class="logoHeader">
-            <img src="img/logoveterinaria letras mas grandes.png" alt="Logotipo" />
+        <div class="headerContainer">
+            <div class="logo">
+                <img src="img/logoveterinaria letras mas grandes.png" alt="isologo veterinaria" class="logoStyle">
+            </div>
+
+            <nav class="menu" id="myTopnav">
+
+                <ul style="display:block;">
+                    <a class="itemMenu" href="index.html">Inicio</a>
+                    <a class="itemMenu" href="Peluqueria.html">Peluqueria</a>
+                    <a class="itemMenu" href="Consultorio.html">Consultorio</a>
+                    <a class="itemMenu" href="Contacto.html">Contacto</a>
+                    <a class="status" onclick="myFunction()" href="javascript:void(0);"> <i class="fa fa-bars"
+                            style="color: #7374d6;" aria-hidden="true"></i></a>
+
+
+                </ul>
+            </nav>
         </div>
-        <div class="toggle">
-            <a href="#">
-                <ion-icon name="menu-outline"></ion-icon>
-            </a>
-        </div>
-        <nav class="menu">
-            <a href="index.html">Inicio</a>
-            <a href="Tienda.html">Tienda</a>
-            <a href="Consultorio.html">Consultorio</a>
-            <a href="#">Contacto</a>
-        </nav>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <script>
-        $(".toggle").on("click", function () {
-            if ($(".menu").hasClass("active")) {
-                $(".menu").removeClass("active");
-                $(this).find("a").html("<ion-icon name='menu-outline'></ion-icon>");
-            } else {
-                $(".menu").addClass("active");
-                $(this).find("a").html("<ion-icon name='close-outline'></ion-icon>");
-            }
-        })
-    </script>
     </header>
 
     <main>
@@ -152,27 +153,103 @@
     </main>
 
     <footer>
-        <div class="logoFooter">
-            <img src="img/logoveterinaria letras mas grandes.png" alt="Logotipo" />
-            <div class="redes-sociales">
-                <div class="red-1"><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></div>
-                <div class="red-2"><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></div>
-                <div class="red-3"><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></div>
+        <div class="containerFooter">
+            <div style="width: 20%;">
+                <div class="logo">
+                    <img src="img/logoveterinaria.png" class="imgLogo" alt="Icono">
+                </div>
+            </div>
+
+            <div style="width: 30%;">
+                <div>
+                    <h5>
+                        <span class="footerTextTitle">UBICACIÓN</span>
+                    </h5>
+                    <div>
+                        <p class="text-align-left m-text-align-center">
+                            <span class="footerText">Av. Gaona 1567.<br> Caba - Buenos Aires.<br>Todos los días
+                                <br>de 9 a 21 hs.</span>
+                            <span class="footerText"><br></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="width: 30%;">
+                <div>
+                    <h5>
+                        <span class="footerTextTitle">CONTACTANOS</span>
+                    </h5>
+                    <div data-element-type="paragraph" data-version="5">
+                        <p class="text-align-left m-text-align-center">
+                            <span class="footerText">4444-4444 <br> 15-3333-3333 (Consultas)
+                                <br> 15-3333-3333 (Urgencias)
+                                <br>Clinica@veterinaria.com</span>
+                            <span class="footerText"><br></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flexright">
+                <div style="text-align: left;display: block;">
+                    <h5>
+                        <span class="footerTextTitle">REDES SOCIALES</span>
+                    </h5>
+                    <div style="display: flex;">
+                        <div class="imgSocialMedia">
+                            <a href="#"> <img src="img/fb.png" class="imgSocial" alt="Icono"></a>
+                        </div>
+                        <div class="imgSocialMedia">
+                            <a href="#"> <img src="img/ig.png" class="imgSocial" alt="Icono"> </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <div class="ubicacion">
-            <h6>UBICACI&Oacute;N</h6>
-            <p class="links">Av. Gaona 1567, Caba</p>
-            <p class="links">1405 - Buenos Aires.</p>
-            <p class="links">Todos los días de 9 a 21 hs.</p>
-        </div>
-        <div class="contactanos">
-            <h6>CONT&Aacute;CTANOS</h6>
-            <p class="links">4444-4444 | 3333-3333 (Consultas)</p>
-            <p class="links">1122222222 (Urgencias)</p>
-            <p class="links">Clinica@veterinaria.com</p>
-        </div>
+
     </footer>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "menu") {
+                x.className += " responsive";
+
+            } else {
+                x.className = "menu";
+            }
+        }
+    </script>
 </body>
+
 </html>
