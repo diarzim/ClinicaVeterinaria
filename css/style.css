@@ -149,7 +149,6 @@ footer {
 .containerColumn {
   flex-direction: column;
   width: 100%;
-  align: text-before-edge;
 }
 
 .containerFooter{
@@ -157,6 +156,32 @@ footer {
   width: 70%; 
   margin: 0px 20px 0px 20px; 
   text-align: left;
+}
+
+.containerpeluqueria{
+  width: 250px;
+  height:250px;
+  overflow:hidden;
+  margin:200px auto;
+  border-radius:20px;
+  box-shadow: 5px 8px 12px grey;
+  display: inline-block;
+  text-align: center;
+}
+
+.containerpeluqueriaimg{
+  width:100%;
+  height:100%;
+
+}
+
+.servicios{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #fe88b1;
+  letter-spacing: 0.5px;
 }
 
 
