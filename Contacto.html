@@ -47,9 +47,25 @@
 
     <main style="width: 100%; height: 100%;">
 
-        <div>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit debitis quos, et reiciendis iusto necessitatibus fuga nemo quibusdam voluptatibus quia dolor ad! Eius delectus ut adipisci, iste explicabo ea consectetur!
-        </div>
+        <div class="cuadro">
+            <h2 class="titulo">Solicite un turno ahora mismo</h2>
+            <p class="informacion">Brindenos sus datos para reservar un turno de peluqueria</p>
+            <form id="form" class="form" method="post" action="https://formspree.io/f/xjvdzoaa" method="POST">
+                <input type="text" name="Nombre y Apellido" placeholder="Nombre y Apellido*" required>
+                <input type="email" name="correo" placeholder="Correo Electronico*" required>
+                <input type="number" name="telefono" placeholder="Numero de Telefono*" required>
+                <input type="date" id="datePickerId" name="Fecha" placeholder="Fecha*" required>
+                <select name="horario" >
+                    <option>10:00</option>
+                    <option>15:00</option>
+                    <option>19:00</option>
+                </select>    
+                <button class="botones" type="reset">Limpiar</button>
+                <button class="botones" type="submit">Enviar</button>
+            </form>
+        <br></br>
+         </div>
+    
 
     </main>
 
@@ -112,6 +128,7 @@
     </footer>
 
     <script>
+        datePickerId.min = new Date().toLocaleDateString('fr-ca');
         let slideIndex = 1;
         showSlides(slideIndex);
 
@@ -139,6 +156,26 @@
             dots[slideIndex - 1].className += " active";
         }
     </script>
+
+<script>
+    const $form = document.querySelector('#form')
+    $form.addEventListener('submit', handleSubmit)
+
+    async function handleSubmit(event)
+    {
+        event.preventDefault()
+        const form = new FormData(this)
+        const response = await fetch(this.action, {
+            method: this.method,
+            body:form,
+            headers: {"Accept": "application/json"}
+        })
+        if (response.ok)
+        {
+            alert("Enviado")
+        }
+    }
+</script>
 
     <script>
         function myFunction() {
