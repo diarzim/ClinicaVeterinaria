@@ -54,6 +54,7 @@ header {
   top: 0px;
   background-color: white;
   box-shadow: 0 3px 4px -2px gray;
+  z-index: 200;
 
 }
 

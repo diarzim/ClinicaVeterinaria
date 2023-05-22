@@ -11,245 +11,411 @@
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="icon" href="img/isologo veterinaria.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <link rel="stylesheet" href="css/consultorioStyle.css">
 </head>
 
 
 <body>
-    <div class="containerSupHeader">
-        <div>
-            <p class="textHeader">Consultas Generales: 4123-4123</p>
+<div class="containerSupHeader">
+    <div>
+        <p class="textHeader">Consultas Generales: 4123-4123</p>
+    </div>
+</div>
+
+<header>
+    <div class="headerContainer">
+        <div class="logo">
+            <img src="img/logoveterinaria letras mas grandes.png" alt="isologo veterinaria" class="logoStyle">
+        </div>
+
+        <nav class="menu" id="myTopnav">
+
+            <ul style="display:block;">
+                <a class="itemMenu" href="index.html">Inicio</a>
+                <a class="itemMenu" href="Peluqueria.html">Peluqueria</a>
+                <a class="itemMenu" href="Consultorio.html">Consultorio</a>
+                <a class="itemMenu" href="Contacto.html">Contacto</a>
+                <a class="status" onclick="myFunction()" href="javascript:void(0);">
+                    <i class="fa fa-bars" style="color: #7374d6;" aria-hidden="true"></i></a>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<main>
+
+    <!-- Aquí puedes añadir el contenido principal de tu página -->
+    <h2 class="titulo">Consultorio</h2>
+
+    <!-- Button trigger modal -->
+    <div class="botonFormulario">
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#turno-modal">
+            saca tu turno
+        </button>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="turno-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        Formulario de reserva de turno
+                    </h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" id="form">
+                        <!--Nombre del cliente-->
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Escriba aqui su nombre"
+                                   name="name">
+                        </div>
+                        <!--Apellido del cliente-->
+                        <div class="mb-3">
+                            <label for="apellido" class="form-label">Apellido</label>
+                            <input type="text" class="form-control" id="apellido"
+                                   placeholder="Escriba aqui su apellido" name="lastName">
+                        </div>
+                        <!--Email del cliente-->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email"
+                                   placeholder="Escriba aqui su direccion de correo" name="email">
+                        </div>
+                        <!--Telefono del cliente-->
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">Telefono</label>
+                            <input type="tel" class="form-control" id="telefono"
+                                   placeholder="Escriba aqui su numero de telefono" name="numberPhone">
+                        </div>
+                        <!--Nombre de la mascota-->
+                        <div class="mb-3">
+                            <label for="nombreMascota" class="form-label">Nombre de la mascota</label>
+                            <input type="text" class="form-control" id="nombreMascota"
+                                   placeholder="Escriba aqui el nombre de su mascota" name="petName">
+                        </div>
+                        <!--Tipo de mascota se mostrara en un campo tipo select-->
+                        <div class="mb-3">
+                            <label for="tipoDeMascota" class="form-label">Tipo de mascota</label>
+                            <select class="form-select" id="tipoDeMascota" name="petType">
+                                <option selected>Seleccione una opcion</option>
+                                <option value="1">Perro</option>
+                                <option value="2">Gato</option>
+                                <option value="3">Conejo</option>
+                                <option value="4">Hamster</option>
+                                <option value="5">Ave</option>
+                                <option value="6">Peces</option>
+                                <option value="7">Mascotas ex&oacute;ticas</option>
+                            </select>
+                        </div>
+                        <!--Sexo del animal-->
+                        <div class="mb-3">
+                            <label for="sexo" class="form-label">Sexo</label>
+                            <select class="form-select" id="sexo" name="animalSex">
+                                <option selected>Seleccione una opcion</option>
+                                <option value="1">Macho</option>
+                                <option value="2">Hembra</option>
+                                <option value="3">Desconozco</option>
+                            </select>
+                        </div>
+                        <!--Edad del animal-->
+                        <div class="mb-3">
+                            <label for="edad" class="form-label">Edad</label>
+                            <input type="number" class="form-control" id="edad"
+                                   placeholder="Escriba edad del animal. Aclarar meses o años" name="age">
+                        </div>
+                        <!--Peso del animal-->
+                        <div class="mb-3">
+                            <label for="peso" class="form-label">Peso (en Kilogramos)</label>
+                            <input type="number" class="form-control" id="peso"
+                                   placeholder="Escriba el peso del animal, si no lo sabe ponga desconozco"
+                                   name="weight">
+                        </div>
+                        <!--Motivo de la consulta-->
+                        <div class="mb-3">
+                            <label for="motivo" class="form-label">Motivo de la consulta</label>
+                            <textarea class="form-control" id="motivo" rows="3" name="motive"></textarea>
+                        </div>
+                        <!--Fecha y hora del turno-->
+                        <div class="mb-3">
+                            <label for="fecha" class="form-label">Fecha</label>
+                            <input type="date" class="form-control" id="fecha" placeholder="Escriba aqui la fecha"
+                                   name="date">
+                        </div>
+                        <div class="mb-3">
+                            <label for="hora" class="form-label">Hora</label>
+                            <input type="time" class="form-control" id="hora" placeholder="Escriba aqui la hora"
+                                   name="time">
+                        </div>
+                        <input type="submit" class="btn btn-success" id="button" value="Reservar turno">
+                    </form>
+
+                    <script type="text/javascript"
+                            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+                    <script type="text/javascript">
+                        emailjs.init('yKAPvJ6fB9e12Iybe')
+                    </script>
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
         </div>
     </div>
 
-    <header>
-        <div class="headerContainer">
+    <div class="containerCards">
+        <section class="card">
+            <div class="face front">
+                <img src="img/Consultorio/dermatologia-2_render.jpg" alt="dermatologia-animal">
+                <h3>Dermatologia</h3>
+            </div>
+            <div class="face back">
+                <h3>Dermatologia</h3>
+                <p>La dermatología veterinaria es la especialidad que se encarga del estudio, diagnóstico y tratamiento
+                    de las enfermedades de la piel de los animales.</p>
+                <div class="link">
+                    <a href="#"></a>
+                </div>
+            </div>
+        </section>
+        <section class="card">
+            <div class="face front">
+                <img src="img/Consultorio/cardiologia_render.jpg" alt="cardiologia_animal">
+                <h3>Cardiologia</h3>
+            </div>
+            <div class="face back">
+                <h3>Cardiologia</h3>
+                <p>La cardiología veterinaria es la especialidad que se encarga del estudio, diagnóstico y tratamiento
+                    de las enfermedades del corazón de los animales.</p>
+                <div class="link">
+                    <a href="#"></a>
+                </div>
+            </div>
+        </section>
+        <section class="card">
+            <div class="face front">
+                <img src="img/Consultorio/traumatologia_render.jpg" alt="traumatologia_animal">
+                <h3>Traumatologia</h3>
+            </div>
+            <div class="face back">
+                <h3>Traumatologia</h3>
+                <p>La traumatología veterinaria es la especialidad que se encarga del estudio, diagnóstico y tratamiento
+                    de las enfermedades de los huesos y articulaciones de los animales.</p>
+                <div class="link">
+                    <a href="#"></a>
+                </div>
+            </div>
+        </section>
+        <section class="card">
+            <div class="face front">
+                <img src="img/Consultorio/oftalmologia_render.jpg" alt="oftalmologia_animal">
+                <h3>Oftalmologia</h3>
+            </div>
+            <div class="face back">
+                <h3>Oftalmologia</h3>
+                <p>La oftalmología veterinaria es la especialidad que se encarga del estudio, diagnóstico y tratamiento
+                    de las enfermedades de los ojos de los animales.</p>
+                <div class="link">
+                    <a href="#"></a>
+                </div>
+            </div>
+        </section>
+        <section class="card">
+            <div class="face front">
+                <img src="img/Consultorio/fisio_render.jpg" alt="kinesiologia_animal">
+                <h3>Kinesiologia</h3>
+            </div>
+            <div class="face back">
+                <h3>Kinesiologia</h3>
+                <p>La kinesiología veterinaria es la especialidad que se encarga del estudio, diagnóstico y tratamiento
+                    de las enfermedades de los músculos de los animales.</p>
+                <div class="link">
+                    <a href="#"></a>
+                </div>
+            </div>
+        </section>
+        <section class="card">
+            <div class="face front">
+                <img src="img/Consultorio/electro_render.jpg" alt="electrocardiograma_animal">
+                <h3>Electrocardiograma</h3>
+            </div>
+            <div class="face back">
+                <h3>Electrocardiograma</h3>
+                <p>El electrocardiograma es una prueba diagnóstica que registra la actividad eléctrica del corazón. Es
+                    una prueba sencilla, indolora y muy útil para el diagnóstico de enfermedades del corazón.</p>
+                <div class="link">
+                    <a href="#"></a>
+                </div>
+            </div>
+        </section>
+        <section class="card">
+            <div class="face front">
+                <img src="img/Consultorio/rayosx_render.jpg" alt="rayosx_animal">
+                <h3>Rayos</h3>
+            </div>
+            <div class="face back">
+                <h3>Rayos</h3>
+                <p>Utilizaci&oacute;n de im&aacute;genes para el diagn&oacute;stico y tratamiento de enfermedades y
+                    lesiones, gesti&oacute;n de atenci&oacute;n al paciente y gu&iacute;a de tratamiento medico
+                    veterinario.</p>
+                <div class="link">
+                    <a href="#"></a>
+                </div>
+            </div>
+        </section>
+        <section class="card">
+            <div class="face front">
+                <img src="img/Consultorio/cirugia_render.jpg" alt="cirugia_animal">
+                <h3>Cirugia</h3>
+            </div>
+            <div class="face back">
+                <h3>Cirugia</h3>
+                <p>Tratamiento quir&uacute;rgico con fines preventivos, diagn&oacute;sticos o paleativos. Tratamiento de
+                    patologias que afectan organos internos, piel y musculatura de los animales.</p>
+                <div class="link">
+                    <a href="#"></a>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <div class="containerFooter">
+        <div style="width: 20%;">
             <div class="logo">
-                <img src="img/logoveterinaria letras mas grandes.png" alt="isologo veterinaria" class="logoStyle">
+                <img src="img/logoveterinaria.png" class="imgLogo" alt="Icono">
             </div>
-
-            <nav class="menu" id="myTopnav">
-
-                <ul style="display:block;">
-                    <a class="itemMenu" href="index.html">Inicio</a>
-                    <a class="itemMenu" href="Peluqueria.html">Peluqueria</a>
-                    <a class="itemMenu" href="Consultorio.html">Consultorio</a>
-                    <a class="itemMenu" href="Contacto.html">Contacto</a>
-                    <a class="status" onclick="myFunction()" href="javascript:void(0);"> <i class="fa fa-bars"
-                            style="color: #7374d6;" aria-hidden="true"></i></a>
-
-
-                </ul>
-            </nav>
         </div>
-    </header>
 
-    <main>
-        <!-- Aquí puedes añadir el contenido principal de tu página -->
-        <h2 class="titulo">Consultorio</h2>
-        <!-- Al hacer click en el link se despliega un popup con un formulario para rellenar -->
-        <div class="turno">
-            <a href="#">Saca tu turno</a>
-        </div>
-        <div class="containerCards">
-            <section class="card">
-                <div class="face front">
-                    <ion-icon name="fish-outline"></ion-icon>
-                    <h3>Dermatologia</h3>
-                </div>
-                <div class="face back">
-                    <h3>Dermatologia</h3>
-                    <p>La dermatología veterinaria es la especialidad que se encarga del estudio, diagnóstico y tratamiento de las enfermedades de la piel de los animales.</p>
-                    <div class="link">
-                        <a href="#">Detalle</a>
-                    </div>
-            </section>
-            <section class="card">
-                <div class="face front">
-                    <ion-icon name="fish-outline"></ion-icon>
-                    <h3>Cardiologia</h3>
-                </div>
-                <div class="face back">
-                    <h3>Cardiologia</h3>
-                    <p>La cardiología veterinaria es la especialidad que se encarga del estudio, diagnóstico y tratamiento de las enfermedades del corazón de los animales.</p>
-                    <div class="link">
-                        <a href="#">Detalle</a>
-                    </div>
-            </section>
-            <section class="card">
-                <div class="face front">
-                    <ion-icon name="fish-outline"></ion-icon>
-                    <h3>Traumatologia</h3>
-                </div>
-                <div class="face back">
-                    <h3>Traumatologia</h3>
-                    <p>La traumatología veterinaria es la especialidad que se encarga del estudio, diagnóstico y tratamiento de las enfermedades de los huesos y articulaciones de los animales.</p>
-                    <div class="link">
-                        <a href="#">Detalle</a>
-                    </div>
-            </section>
-            <section class="card">
-                <div class="face front">
-                    <ion-icon name="fish-outline"></ion-icon>
-                    <h3>Oftalmologia</h3>
-                </div>
-                <div class="face back">
-                    <h3>Oftalmologia</h3>
-                    <p>La oftalmología veterinaria es la especialidad que se encarga del estudio, diagnóstico y tratamiento de las enfermedades de los ojos de los animales.</p>
-                    <div class="link">
-                        <a href="#">Detalle</a>
-                    </div>
-            </section>
-            <section class="card">
-                <div class="face front">
-                    <ion-icon name="fish-outline"></ion-icon>
-                    <h3>Kinesiologia</h3>
-                </div>
-                <div class="face back">
-                    <h3>Kinesiologia</h3>
-                    <p>La kinesiología veterinaria es la especialidad que se encarga del estudio, diagnóstico y tratamiento de las enfermedades de los músculos de los animales.</p>
-                    <div class="link">
-                        <a href="#">Detalle</a>
-                    </div>
-            </section>
-            <section class="card">
-                <div class="face front">
-                    <ion-icon name="fish-outline"></ion-icon>
-                    <h3>Electrocardiograma</h3>
-                </div>
-                <div class="face back">
-                    <h3>Electrocardiograma</h3>
-                    <p>El electrocardiograma es una prueba diagnóstica que registra la actividad eléctrica del corazón. Es una prueba sencilla, indolora y muy útil para el diagnóstico de enfermedades del corazón.</p>
-                    <div class="link">
-                        <a href="#">Detalle</a>
-                    </div>
-            </section>
-            <section class="card">
-                <div class="face front">
-                    <ion-icon name="fish-outline"></ion-icon>
-                    <h3>Rayos</h3>
-                </div>
-                <div class="face back">
-                    <h3>Rayos</h3>
-                    <p>La radiología veterinaria es la especialidad que se encarga del estudio, diagnóstico y tratamiento de las enfermedades de los huesos y articulaciones de los animales.</p>
-                    <div class="link">
-                        <a href="#">Detalle</a>
-                    </div>
-            </section>
-            <section class="card">
-                <div class="face front">
-                    <ion-icon name="fish-outline"></ion-icon>
-                    <h3>Cirugia</h3>
-                </div>
-                <div class="face back">
-                    <h3>Cirugia</h3>
-                    <p>La cirugía veterinaria es la especialidad que se encarga del estudio, diagnóstico y tratamiento de las enfermedades de los huesos y articulaciones de los animales.</p>
-                    <div class="link">
-                        <a href="#">Detalle</a>
-                    </div>
-            </section>
-        </div>
-    </main>
-
-    <footer>
-        <div class="containerFooter">
-            <div style="width: 20%;">
-                <div class="logo">
-                    <img src="img/logoveterinaria.png" class="imgLogo" alt="Icono">
-                </div>
-            </div>
-
-            <div style="width: 30%;">
+        <div style="width: 30%;">
+            <div>
+                <h5>
+                    <span class="footerTextTitle">UBICACIÓN</span>
+                </h5>
                 <div>
-                    <h5>
-                        <span class="footerTextTitle">UBICACIÓN</span>
-                    </h5>
-                    <div>
-                        <p class="text-align-left m-text-align-center">
+                    <p class="text-align-left m-text-align-center">
                             <span class="footerText">Av. Gaona 1567.<br> Caba - Buenos Aires.<br>Todos los días
                                 <br>de 9 a 21 hs.</span>
-                            <span class="footerText"><br></span>
-                        </p>
-                    </div>
+                        <span class="footerText"><br></span>
+                    </p>
                 </div>
             </div>
+        </div>
 
-            <div style="width: 30%;">
-                <div>
-                    <h5>
-                        <span class="footerTextTitle">CONTACTANOS</span>
-                    </h5>
-                    <div data-element-type="paragraph" data-version="5">
-                        <p class="text-align-left m-text-align-center">
+        <div style="width: 30%;">
+            <div>
+                <h5>
+                    <span class="footerTextTitle">CONTACTANOS</span>
+                </h5>
+                <div data-element-type="paragraph" data-version="5">
+                    <p class="text-align-left m-text-align-center">
                             <span class="footerText">4444-4444 <br> 15-3333-3333 (Consultas)
                                 <br> 15-3333-3333 (Urgencias)
                                 <br>Clinica@veterinaria.com</span>
-                            <span class="footerText"><br></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flexright">
-                <div style="text-align: left;display: block;">
-                    <h5>
-                        <span class="footerTextTitle">REDES SOCIALES</span>
-                    </h5>
-                    <div style="display: flex;">
-                        <div class="imgSocialMedia">
-                            <a href="#"> <img src="img/fb.png" class="imgSocial" alt="Icono"></a>
-                        </div>
-                        <div class="imgSocialMedia">
-                            <a href="#"> <img src="img/ig.png" class="imgSocial" alt="Icono"> </a>
-                        </div>
-                    </div>
+                        <span class="footerText"><br></span>
+                    </p>
                 </div>
             </div>
         </div>
 
-    </footer>
+        <div class="flexright">
+            <div style="text-align: left;display: block;">
+                <h5>
+                    <span class="footerTextTitle">REDES SOCIALES</span>
+                </h5>
+                <div style="display: flex;">
+                    <div class="imgSocialMedia">
+                        <a href="#"> <img src="img/fb.png" class="imgSocial" alt="Icono"></a>
+                    </div>
+                    <div class="imgSocialMedia">
+                        <a href="#"> <img src="img/ig.png" class="imgSocial" alt="Icono"> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
+</footer>
 
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
         }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
+        if (n < 1) {
+            slideIndex = slides.length
         }
-
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
         }
-    </script>
-
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "menu") {
-                x.className += " responsive";
-
-            } else {
-                x.className = "menu";
-            }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
         }
-    </script>
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
+
+<script>
+    const btn = document.getElementById('button');
+    console.log('button')
+    document.getElementById('form')
+        .addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            btn.value = 'Enviando...';
+
+            const serviceID = 'default_service';
+            const templateID = 'template_w83l77b';
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.value = 'Reservar turno';
+                    alert('Turno reservado exitosamente!');
+                }, (err) => {
+                    btn.value = 'Send Email';
+                    alert(JSON.stringify(err));
+                });
+        });
+</script>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "menu") {
+            x.className += " responsive";
+
+        } else {
+            x.className = "menu";
+        }
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
